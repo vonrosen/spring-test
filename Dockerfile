@@ -6,4 +6,4 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 RUN mvn package
-CMD java -jar /app/target/springboot-0.0.1-SNAPSHOT.jar
+CMD src/main/shell/start.sh
