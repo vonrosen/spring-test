@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host=pghost
+host=db
 port=5432
 user=postgres
 password=

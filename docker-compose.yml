@@ -2,8 +2,7 @@ version: "3.3"
 services:
    webapp:
       build: .
-      image: spring-test
-      hostname: pghost
+      image: spring-test      
       ports:
          - 8080:8080
       depends_on:
