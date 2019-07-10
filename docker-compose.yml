@@ -3,10 +3,16 @@ services:
    webapp:
       build: .
       image: spring-test
-      network_mode: host
+      hostname: pghost
       ports:
-         - "8080:8080"
+         - 8080:8080
+      depends_on:
+         - db     
    db:
       image: postgres
+      command: /bin/bash -c "/shell_scripts/configure_docker_postgres.sh"
+      volumes:
+         - ./src/main/shell:/shell_scripts
+         - ./src/main/sql:/sql_scripts
       ports:
-         - "5432:5432"
+         - 5432:5432
