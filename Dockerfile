@@ -8,4 +8,4 @@ COPY . /app
 WORKDIR /app
 RUN mvn package
 EXPOSE 8080
-CMD src/main/shell/start_in_docker.sh
+CMD src/main/shell/start.sh

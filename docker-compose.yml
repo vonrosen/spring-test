@@ -3,6 +3,9 @@ services:
    webapp:
       build: .
       image: spring-test      
+      command: /bin/bash -c "/shell_scripts/start_in_docker.sh"
+      volumes:
+         - ./src/main/shell:/shell_scripts
       ports:
          - 8080:8080
       depends_on:
