@@ -7,5 +7,6 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 RUN mvn package
+EXPOSE 8081
 EXPOSE 8080
 CMD src/main/shell/start.sh
