@@ -2,6 +2,7 @@ version: "3.3"
 services:
    webapp:
       build: .
+      network_mode: host
       image: spring-test      
       command: /bin/bash -c "/shell_scripts/start_in_docker.sh"
       volumes:

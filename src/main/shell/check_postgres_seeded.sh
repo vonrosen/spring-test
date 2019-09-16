@@ -1,6 +1,6 @@
 #!/bin/bash
 
-host=db
+host=localhost
 port=5432
 user=postgres
 
@@ -11,7 +11,7 @@ wait=10
 
 while [ true ]
 do
-  psql -h db -U postgres -c "select * from users;" users |fgrep hunter >/dev/null
+  psql -h ${host} -U postgres -c "select * from users;" users |fgrep hunter >/dev/null
 
   if [ "$?" -eq 0 ]; then
     exit 0
